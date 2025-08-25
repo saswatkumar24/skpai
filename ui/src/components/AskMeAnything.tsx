@@ -5,8 +5,7 @@ interface AskMeAnythingProps {
   onAskQuestion?: (question: string) => void;
 }
 
-export const AskMeAnything: React.FC<AskMeAnythingProps> = ({ onAskQuestion }) => {
-  // onAskQuestion is available for future use
+export const AskMeAnything: React.FC<AskMeAnythingProps> = ({ onAskQuestion = () => {} }) => {
   const [question, setQuestion] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [response, setResponse] = useState('');
@@ -52,6 +51,7 @@ export const AskMeAnything: React.FC<AskMeAnythingProps> = ({ onAskQuestion }) =
       setIsLoading(true);
       const answer = getResponse(question.trim());
       setResponse(answer);
+      onAskQuestion(question.trim());
       setQuestion('');
       // Reset loading after a short delay
       setTimeout(() => setIsLoading(false), 1000);
