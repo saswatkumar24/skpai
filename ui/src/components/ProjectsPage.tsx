@@ -13,7 +13,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ setActiveSection }) 
       tech: ["AI", "OpenAI API", "LangChain", "React", "CSS", "Cursor"],
       image: "🤖",
       category: "AI/ML",
-      link: "#",
+      link: "https://saswatkumar24.github.io/skpai/",
       featured: true
     },
     {
@@ -22,7 +22,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ setActiveSection }) 
       tech: ["AI", "OpenAI API", "LangChain", "React", "CSS", "Cursor"],
       image: "🎓",
       category: "AI/ML",
-      link: "#",
+      link: "https://saswatkumar24.github.io/skpai/",
       featured: true
     },
     {
@@ -31,7 +31,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ setActiveSection }) 
       tech: ["AI", "OpenAI API", "LangChain", "Shell Scripting", "CSS", "Cursor"],
       image: "🧹",
       category: "AI/ML",
-      link: "#",
+      link: "https://saswatkumar24.github.io/skpai/",
       featured: true
     },
     {
@@ -204,9 +204,14 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ setActiveSection }) 
 
                 {/* View Project Button - Only for AI/ML projects */}
                 {project.category === "AI/ML" && (
-                  <button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105">
+                  <a 
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 text-center"
+                  >
                     View Project →
-                  </button>
+                  </a>
                 )}
               </div>
             </motion.div>
