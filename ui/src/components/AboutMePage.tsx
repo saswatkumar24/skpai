@@ -156,7 +156,7 @@ export const AboutMePage: React.FC = () => {
             <div className="relative">
               <div className="w-80 h-80 mx-auto rounded-full overflow-hidden border-4 border-purple-200 shadow-2xl">
                 <img 
-                  src="/public/saswat.jpeg" 
+                  src="/skpai/saswat.jpeg" 
                   alt="Saswat Patro - Professional Headshot" 
                   className="w-full h-full object-cover"
                   onError={(e) => {

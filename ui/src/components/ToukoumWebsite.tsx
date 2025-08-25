@@ -55,12 +55,12 @@ export const ToukoumWebsite: React.FC = () => {
               >
                 <div className="w-full h-full rounded-full overflow-hidden bg-white/80 backdrop-blur-md border-2 border-purple-200 transform transition-transform duration-300 group-hover:rotate-12 shadow-lg">
                   <img 
-                    src="skp_avatar.png"
+                    src="/skpai/skp_avatar.png"
                     alt="Saswat Avatar"
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       console.error('Image failed to load');
-                      e.currentTarget.src = '/saswat.jpeg';
+                      e.currentTarget.src = '/skpai/saswat.jpeg';
                     }}
                   />
                 </div>
@@ -123,12 +123,12 @@ export const ToukoumWebsite: React.FC = () => {
             >
               <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-purple-200 shadow-lg mx-auto mb-4 transform hover:rotate-12 transition-transform duration-300">
                 <img 
-                  src="skp_avatar.png"
+                  src="/skpai/skp_avatar.png"
                   alt="Saswat Avatar"
                   className="w-full h-full object-cover"
                   onError={(e) => {
                     console.error('Image failed to load');
-                    e.currentTarget.src = '/saswat.jpeg';
+                    e.currentTarget.src = '/skpai/saswat.jpeg';
                   }}
                 />
               </div>
