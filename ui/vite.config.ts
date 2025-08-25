@@ -23,7 +23,7 @@ const { port, apiUrl, firebaseAuthPort, useFirebaseEmulator } = parseCliArgs();
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/skpai/', // Add this line - should match your repository name
+  base: '/skpai/',
   server: {
     port: port
   },

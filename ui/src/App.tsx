@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import { ToukoumWebsite } from '@/components/ToukoumWebsite';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -11,8 +11,10 @@ function App() {
         disableTransitionOnChange
         storageKey="toukoum-theme"
       >
-      <Router>
-        <ToukoumWebsite />
+      <Router basename="/skpai">
+        <Routes>
+          <Route path="/*" element={<ToukoumWebsite />} />
+        </Routes>
       </Router>
     </ThemeProvider>
   );
