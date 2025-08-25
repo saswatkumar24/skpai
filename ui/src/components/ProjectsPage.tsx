@@ -22,7 +22,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ setActiveSection }) 
       tech: ["AI", "OpenAI API", "LangChain", "React", "CSS", "Cursor"],
       image: "🎓",
       category: "AI/ML",
-      link: "https://saswatkumar24.github.io/skpai/",
+      link: "https://github.com/saswatkumar24",
       featured: true
     },
     {
