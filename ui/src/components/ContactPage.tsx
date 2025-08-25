@@ -51,10 +51,10 @@ export const ContactPage: React.FC = () => {
     },
     {
       title: "Portfolio",
-      value: "saswat.dev",
+      value: "AI Portfolio",
       icon: "🌐",
       color: "from-purple-500 to-pink-500",
-      link: "https://saswat.dev",
+      link: "https://saswatkumar24.github.io/skpai/",
       width: "half"
     },
     {

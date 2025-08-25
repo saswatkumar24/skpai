@@ -22,7 +22,7 @@ const websiteData = {
     email: "saswat24@gmail.com",
     linkedin: "https://www.linkedin.com/in/saswat-kumar-patro-55874669/",
     github: "https://github.com/saswatkumar24",
-    portfolio: "saswat.dev"
+    portfolio: "https://saswatkumar24.github.io/skpai/"
   },
   experience: [
     {
