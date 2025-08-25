@@ -24,6 +24,15 @@ const { port, apiUrl, firebaseAuthPort, useFirebaseEmulator } = parseCliArgs();
 export default defineConfig({
   plugins: [react()],
   base: '/skpai/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
   server: {
     port: port
   },
