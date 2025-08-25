@@ -9,35 +9,35 @@ export const AboutMePage: React.FC = () => {
       title: "Senior Tech Lead",
       company: "HCL Tech (Deutsche Bank Client)",
       description: "Application management and Project Automation. Integrating different services and tools like Netcool, Newrelic and ServiceNow Integration & MS Teams integration with Geneos. Managing servers and maintaining their health through Nimsoft and NRI. Writing perl modules, scripts, unit tests to automate various alerts and reports as per client requirement. Also working on LangChain and AI/ML models to create automation agents.",
-      skills: ["Perl", "Shell Scripting", "MySQL", "Netcool", "Newrelic", "ServiceNow", "Geneos", "Nimsoft", "NRI", "CI/CD", "Automation", "LangChain", "AI/ML"]
+      skills: ["Perl", "Shell Scripting", "Netcool", "Newrelic", "ServiceNow", "Geneos", "Nimsoft", "NRI", "CI/CD", "Automation", "LangChain", "AI/ML"]
     },
     {
       year: "2020 - 2022",
       title: "Associate - Project",
       company: "Cognizant Technology Solutions (Mastercard Client)",
       description: "Application development and Database management. Implementing various protocols for Mastercard. Writing perl modules, scripts, unit tests for different projects as per client requirement.",
-      skills: ["Perl", "Shell Scripting", "MySQL", "Database Management", "Unit Testing", "Protocol Implementation"]
+      skills: ["Perl", "Database Management", "Unit Testing", "Protocol Implementation"]
     },
     {
       year: "2017 - 2020",
       title: "IT Analyst",
       company: "Tata Consultancy Services (Humana Inc. Client)",
       description: "Application development and Database management. Designing jobs to automate processes like generating invoices, timesheet report etc. Writing perl modules for different projects as per the workflow given. Writing unit test case, sql query files and helper functions as required.",
-      skills: ["Perl", "Shell Scripting", "MySQL", "Database Management", "Automation", "Unit Testing"]
+      skills: ["Perl", "SQL", "Database Management", "Automation", "Unit Testing", "Shell Scripting"]
     },
     {
       year: "2015 - 2017",
       title: "Senior Member Tech",
-      company: "Aptroid Technologies Pvt. Ltd.",
+      company: "Aptroid Technologies Pvt. Ltd. (Zeta Global)",
       description: "Automation tool designing, Log processing and Data analysis and management. Automating log processing. Automating the process of report generation, Sending mails of reports in real time. Report generation and analysing reports to increase the deliverability of campaigns.",
-      skills: ["Perl", "Shell Scripting", "MySQL", "Automation", "Log Processing", "Data Analysis", "Report Generation", "Database Management"]
+      skills: ["Automation", "Log Processing", "Data Analysis", "Report Generation", "Database Management"]
     },
     {
       year: "2014 - 2015",
       title: "Project Associate",
       company: "Zeta Global",
       description: "Email Marketing and Data analytics. Worked on Email marketing analysis, automation tool designing, research and development. Wrote various automation scripts for PMTA monitoring, Email suppressions, Email sending.",
-      skills: ["Perl", "Shell Scripting", "MySQL", "Email Marketing", "Data Analytics", "Automation", "PMTA", "Zeta Mail"]
+      skills: ["Email Marketing", "Data Analytics", "Automation", "PMTA", "Zeta Mail"]
     }
   ];
 
@@ -73,7 +73,7 @@ export const AboutMePage: React.FC = () => {
       title: "Board of Studies (BoS) Member",
       description: "Board of Studies (BoS) Member for the Undergraduate and Postgraduate programmes in the Department of Electronics and Communication Engineering for the academic session 2025–26., GIET University, Gunner",
       year: "2025",
-      icon: "🎓"
+      icon: "📚"
     },
     {
       title: "Best Renewable Project",
@@ -85,7 +85,7 @@ export const AboutMePage: React.FC = () => {
       title: "Best Student",
       description: "Received the Best Student and School Topper award at the Silver Jubilee celebration of Sivananda Centenary Boys' High School.",
       year: "2011",
-      icon: "⭐"
+      icon: "👑"
     }
   ];
 
@@ -156,13 +156,9 @@ export const AboutMePage: React.FC = () => {
             <div className="relative">
               <div className="w-80 h-80 mx-auto rounded-full overflow-hidden border-4 border-purple-200 shadow-2xl">
                 <img 
-                  src="/public/saswat.jpeg" 
+                  src="saswat.jpeg" 
                   alt="Saswat Patro - Professional Headshot" 
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    console.error('Image failed to load');
-                    e.currentTarget.src = 'saswat.jpeg';
-                  }}
                 />
               </div>
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-2xl animate-bounce">

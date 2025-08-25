@@ -9,7 +9,7 @@ export const SkillsPage: React.FC = () => {
         { name: "Perl", level: 95, icon: "🐪", color: "from-blue-500 to-cyan-500" },
         { name: "Shell Scripting", level: 90, icon: "🐚", color: "from-green-500 to-blue-600" },
         { name: "Python", level: 85, icon: "🐍", color: "from-yellow-500 to-blue-600" },
-        { name: "PowerShell", level: 65, icon: "�", color: "from-blue-400 to-blue-600" },
+        { name: "SQL", level: 88, icon: "🗄️", color: "from-blue-400 to-blue-600" },
         { name: "React.js", level: 75, icon: "⚛️", color: "from-cyan-400 to-blue-500" }
       ]
     },
@@ -25,38 +25,37 @@ export const SkillsPage: React.FC = () => {
       title: "Testing & QA",
       skills: [
         { name: "ALM", level: 88, icon: "🎯", color: "from-purple-500 to-blue-500" },
-        { name: "Postman", level: 85, icon: "📬", color: "from-orange-500 to-red-500" }
+        { name: "Postman", level: 85, icon: "📬", color: "from-orange-500 to-red-500" },
+        { name: "JUnit", level: 82, icon: "🧪", color: "from-red-400 to-red-600" }
       ]
     },
     {
       title: "AI & ML",
       skills: [
         { name: "AI & ML Fundamentals", level: 85, icon: "🧠", color: "from-purple-500 to-pink-500" },
-        { name: "LangChain", level: 65, icon: "🔗", color: "from-green-500 to-blue-500" },
-        { name: "OpenAI API", level: 65, icon: "🤖", color: "from-green-500 to-blue-500" },
-        { name: "Cursor", level: 65, icon: "✏️", color: "from-blue-500 to-purple-500" },
-        { name: "Prompt Engineering", level: 65, icon: "💭", color: "from-yellow-400 to-orange-500" }
+        { name: "LangChain", level: 80, icon: "🔗", color: "from-green-500 to-blue-500" },
+        { name: "OpenAI API", level: 82, icon: "🤖", color: "from-green-500 to-blue-500" },
+        { name: "Cursor", level: 78, icon: "✏️", color: "from-blue-500 to-purple-500" },
+        { name: "Prompt Engineering", level: 75, icon: "💭", color: "from-yellow-400 to-orange-500" }
       ]
     },
     {
       title: "Observability Tools",
       skills: [
-        { name: "IBM Tivoli (Netcool)", level: 85, icon: "🔍", color: "from-blue-500 to-blue-700" },
-        { name: "Nimsoft UIM", level: 85, icon: "📊", color: "from-purple-500 to-blue-500" },
+        { name: "IBM Tivoli (Netcool)", level: 92, icon: "🔍", color: "from-blue-500 to-blue-700" },
+        { name: "Nimsoft UIM", level: 90, icon: "📊", color: "from-purple-500 to-blue-500" },
         { name: "New Relic", level: 88, icon: "📈", color: "from-orange-500 to-red-500" },
-        { name: "Splunk", level: 85, icon: "🔎", color: "from-orange-400 to-yellow-500" },
-        { name: "Grafana", level: 65, icon: "📊", color: "from-orange-500 to-red-500" },
-        { name: "Geneos", level: 86, icon: "📡", color: "from-blue-500 to-cyan-500" }
+        { name: "Splunk", level: 85, icon: "🔎", color: "from-orange-400 to-yellow-500" }
       ]
     },
     {
       title: "DevOps & Version Control",
       skills: [
-        { name: "Jenkins", level: 85, icon: "⚙️", color: "from-red-500 to-orange-500" },
+        { name: "Jenkins", level: 88, icon: "⚙️", color: "from-red-500 to-orange-500" },
         { name: "TeamCity", level: 85, icon: "🏗️", color: "from-blue-500 to-blue-700" },
-        { name: "Kubernetes", level: 85, icon: "⛵", color: "from-blue-400 to-blue-600" },
+        { name: "Kubernetes", level: 82, icon: "⛵", color: "from-blue-400 to-blue-600" },
         { name: "Docker", level: 85, icon: "🐳", color: "from-blue-500 to-blue-700" },
-        { name: "Git", level: 95, icon: "📝", color: "from-orange-500 to-red-600" },
+        { name: "Git", level: 90, icon: "📝", color: "from-orange-500 to-red-600" },
         { name: "SVN", level: 85, icon: "📦", color: "from-gray-500 to-gray-700" }
       ]
     }

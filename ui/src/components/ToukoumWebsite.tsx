@@ -4,7 +4,7 @@ import { FluidBackground } from './FluidBackground';
 import { AboutMePage } from './AboutMePage';
 import { SkillsPage } from './SkillsPage';
 import { ProjectsPage } from './ProjectsPage';
-import { FunPage } from './FunPage';
+import FunPage from './FunPage';
 import { ContactPage } from './ContactPage';
 import { FixedChatBot } from './FixedChatBot';
 
@@ -55,7 +55,7 @@ export const ToukoumWebsite: React.FC = () => {
               >
                 <div className="w-full h-full rounded-full overflow-hidden bg-white/80 backdrop-blur-md border-2 border-purple-200 transform transition-transform duration-300 group-hover:rotate-12 shadow-lg">
                   <img 
-                    src={`${import.meta.env.BASE_URL}skp_avatar.png`}
+                    src="skp_avatar.png"
                     alt="Saswat Avatar"
                     className="w-full h-full object-cover"
                     onError={(e) => {
@@ -123,7 +123,7 @@ export const ToukoumWebsite: React.FC = () => {
             >
               <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-purple-200 shadow-lg mx-auto mb-4 transform hover:rotate-12 transition-transform duration-300">
                 <img 
-                  src={`${import.meta.env.BASE_URL}skp_avatar.png`}
+                  src="skp_avatar.png"
                   alt="Saswat Avatar"
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -159,9 +159,9 @@ export const ToukoumWebsite: React.FC = () => {
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="text-xl text-gray-600 max-w-2xl"
+              className="text-xl text-gray-600 max-w-2xl mb-24"
             >
-              Welcome to my AI-powered portfolio. Explore my work, skills, and creative projects.
+              Welcome to my AI-powered portfolio. Explore my work, skills and creative projects.
             </motion.p>
             </motion.section>
           )}
@@ -198,7 +198,7 @@ export const ToukoumWebsite: React.FC = () => {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <ProjectsPage />
+              <ProjectsPage setActiveSection={setActiveSection} />
             </motion.div>
           )}
 

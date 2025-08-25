@@ -133,17 +133,17 @@ const FunPage: React.FC = () => {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             <div className="bg-white/80 rounded-xl p-4 border border-gray-200 shadow-lg">
-              <div className="text-3xl mb-2">📈</div>
+              <div className="text-3xl mb-2">�</div>
               <h4 className="font-semibold text-gray-900 mb-2">Investing in US</h4>
               <p className="text-gray-700 text-sm">Exploring US markets through the S&P 500, NASDAQ tech giants, ETFs, and individual stock opportunities.</p>
             </div>
             <div className="bg-white/80 rounded-xl p-4 border border-gray-200 shadow-lg">
-              <div className="text-3xl mb-2">🎨</div>
+              <div className="text-3xl mb-2">�</div>
               <h4 className="font-semibold text-gray-900 mb-2">Interior Designing</h4>
               <p className="text-gray-700 text-sm">Doing interior design of my new house</p>
             </div>
             <div className="bg-white/80 rounded-xl p-4 border border-gray-200 shadow-lg">
-              <div className="text-3xl mb-2">🌱</div>
+              <div className="text-3xl mb-2">�</div>
               <h4 className="font-semibold text-gray-900 mb-2">Urban Gardening</h4>
               <p className="text-gray-700 text-sm">Exploring sustainable gardening practices</p>
             </div>

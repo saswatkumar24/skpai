@@ -1,42 +1,42 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const FunPage: React.FC = () => {
+export const FunPage: React.FC = () => {
   const hobbies = [
     {
       title: "📈 Investing",
-      description: "Passionate about investing, market analysis, and building sustainable wealth. I manage a personalized and diversified portfolio with a CAGR of 23.5% over the last 5 years. My strategy combines long-term investing with active trading in futures and options.",
+      description: "Passionate about financial markets and smart investment strategies. Always learning about new investment opportunities and market trends.",
       icon: "💹",
       color: "from-green-500 to-emerald-500",
-      details: ["Stock Market", "Futures & Options", "Technical Analysis", "Portfolio Management", "Wealth Building"]
+      details: ["Stock Market", "Mutual Funds", "Market Analysis", "Portfolio Management", "Financial Planning"]
     },
     {
       title: "🎮 Gaming",
-      description: "Passionate gamer and Call of Duty enthusiast — catch me in action at Legend level. My handle is skp1993, send a request if you want to squad up with our group!",
+      description: "Love immersing myself in strategic and adventure games. Gaming helps me unwind and keeps my problem-solving skills sharp.",
       icon: "🕹️",
       color: "from-blue-500 to-cyan-500",
-      details: ["Call of Duty", "Legend Level", "Team Player", "FPS Games", "Competitive Gaming"]
+      details: ["Strategy Games", "Adventure RPGs", "PC Gaming", "Online Multiplayer", "Game Communities"]
     },
     {
       title: "✈️ Traveling",
-      description: "Love both the mountains of Manali and the beaches of Goa — from Shimla and Ooty to the Taj Mahal, I've roamed many corners of India. Always ready to pack my bags (with my wife as my favorite travel buddy) for the next adventure!",
+      description: "Exploring new destinations, experiencing different cultures, and creating lasting memories through adventures.",
       icon: "🌎",
       color: "from-yellow-500 to-orange-500",
-      details: ["Indian Mountains", "Beach Life", "Historical Sites", "Couple Travel", "Adventure Seeker"]
+      details: ["Cultural Exploration", "Adventure Travel", "Photography", "Local Cuisines", "Historical Sites"]
     },
     {
       title: "🎥 Movies & Shows",
-      description: "A vivid watcher who believes The Big Bang Theory beats Friends (and yes, The Office too 😅). Comedy, Action, and Suspense Thrillers are my go-to genres, and I never run out of recommendations. Basically, I'm the Chandler of real life — sarcasm included, binge-watching guaranteed! I'm also a Sheldon Cooper at times… Bazinga!",
+      description: "Enthusiastic about quality entertainment, from thought-provoking documentaries to engaging series across various genres.",
       icon: "🎬",
       color: "from-purple-500 to-pink-500",
-      details: ["The Big Bang Theory", "Comedy Shows", "Action Movies", "Suspense Thrillers", "Binge Watching"]
+      details: ["Mystery Thrillers", "Documentaries", "Sci-Fi Series", "Crime Drama", "International Cinema"]
     },
     {
       title: "👨‍🏫 Teaching",
-      description: "Previously volunteered with eVidyaloka, teaching underprivileged children and shaping young minds. I always enjoy helping others in their academic journey and sharing knowledge whenever I can.",
+      description: "Finding joy in sharing knowledge and helping others grow. Believe in the power of education to transform lives.",
       icon: "📚",
       color: "from-indigo-500 to-blue-500",
-      details: ["eVidyaloka", "Volunteer Teaching", "Mentoring", "Knowledge Sharing", "Education Impact"]
+      details: ["Technical Mentoring", "Knowledge Sharing", "Career Guidance", "Skill Development", "Workshop Facilitation"]
     },
     {
       title: "🌱 Gardening",
@@ -133,19 +133,19 @@ const FunPage: React.FC = () => {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             <div className="bg-white/80 rounded-xl p-4 border border-gray-200 shadow-lg">
-              <div className="text-3xl mb-2">📈</div>
-              <h4 className="font-semibold text-gray-900 mb-2">Investing in US</h4>
-              <p className="text-gray-700 text-sm">Exploring US markets through the S&P 500, NASDAQ tech giants, ETFs, and individual stock opportunities.</p>
+              <div className="text-3xl mb-2">📊</div>
+              <h4 className="font-semibold text-gray-900 mb-2">Advanced Investment</h4>
+              <p className="text-gray-700 text-sm">Studying market analysis and portfolio optimization</p>
             </div>
             <div className="bg-white/80 rounded-xl p-4 border border-gray-200 shadow-lg">
-              <div className="text-3xl mb-2">🎨</div>
-              <h4 className="font-semibold text-gray-900 mb-2">Interior Designing</h4>
-              <p className="text-gray-700 text-sm">Doing interior design of my new house</p>
-            </div>
-            <div className="bg-white/80 rounded-xl p-4 border border-gray-200 shadow-lg">
-              <div className="text-3xl mb-2">🌱</div>
+              <div className="text-3xl mb-2">🌿</div>
               <h4 className="font-semibold text-gray-900 mb-2">Urban Gardening</h4>
               <p className="text-gray-700 text-sm">Exploring sustainable gardening practices</p>
+            </div>
+            <div className="bg-white/80 rounded-xl p-4 border border-gray-200 shadow-lg">
+              <div className="text-3xl mb-2">🎯</div>
+              <h4 className="font-semibold text-gray-900 mb-2">Mentorship Skills</h4>
+              <p className="text-gray-700 text-sm">Enhancing teaching and guidance techniques</p>
             </div>
           </div>
         </div>
@@ -245,5 +245,3 @@ const FunPage: React.FC = () => {
     </motion.div>
   );
 };
-
-export default FunPage;

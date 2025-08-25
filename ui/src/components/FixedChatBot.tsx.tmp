@@ -13,7 +13,7 @@ interface FixedChatBotProps {
   className?: string;
 }
 
-export const FixedChatBot: React.FC<FixedChatBotProps> = ({ className = '' }) => {
+const FixedChatBot: React.FC<FixedChatBotProps> = ({ className = '' }) => {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
   const [inputValue, setInputValue] = useState<string>('');
   const [messages, setMessages] = useState<Message[]>([]);
@@ -195,14 +195,10 @@ export const FixedChatBot: React.FC<FixedChatBotProps> = ({ className = '' }) =>
     }
 
     // Experience duration and history
-    if ((input.includes('total') || input.includes('how many') || input.includes('how long') || matchesCategory(contextKeywords.duration)) && 
-        (input.includes('exp') || input.includes('year') || matchesCategory(contextKeywords.experience))) {
-      const totalYears = 11;
-      const companies = websiteData.experience.map(e => e.company.split(' (')[0]); // Remove client names for cleaner response
-      return `Saswat has ${totalYears}+ years of professional experience in software development and automation.\n\n` +
-             `Career Progression:\n` +
-             websiteData.experience.map(e => `• ${e.year}: ${e.title} at ${e.company.split(' (')[0]}`).join('\n') + '\n\n' +
-             `He has worked with prestigious organizations including ${companies.slice(0, 3).join(', ')}, focusing on application development, automation, and AI/ML integration.`;
+    if (matchesCategory(contextKeywords.duration) && matchesCategory(contextKeywords.experience)) {
+      const totalYears = 11; // Calculate dynamically in production
+      const companies = websiteData.experience.map(e => e.company);
+      return `Saswat has ${totalYears} years of professional experience, working with prestigious organizations including ${companies.join(', ')}.`;
     }
 
     // Detailed work history
@@ -509,4 +505,4 @@ export const FixedChatBot: React.FC<FixedChatBotProps> = ({ className = '' }) =>
   );
 };
 
-
+export default FixedChatBot;

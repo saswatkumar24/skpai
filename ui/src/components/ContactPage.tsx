@@ -1,7 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
 export const ContactPage: React.FC = () => {
+  useEffect(() => {
+    // Initialize EmailJS with your public key
+    emailjs.init('n3U7Znh_Ky9SSDDus');
+  }, []);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -57,7 +62,7 @@ export const ContactPage: React.FC = () => {
       value: "Download Resume",
       icon: "📄",
       color: "from-indigo-500 to-blue-500",
-      link: "/saswat_10y_hcl.docx",
+      link: "saswat_10y_hcl.docx",
       width: "half"
     }
   ];
@@ -72,16 +77,40 @@ export const ContactPage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    
-    // Show success message (you can implement a toast notification here)
-    alert('Message sent successfully! I\'ll get back to you soon.');
+
+    try {
+      console.log('Sending email with data:', formData);
+      const templateParams = {
+        name: formData.name,
+        email: formData.email,
+        title: formData.subject, // Changed to match template variable
+        message: formData.message
+      };
+      
+      // Log the parameters being sent
+      console.log('Sending with params:', templateParams);      console.log('Template parameters:', templateParams);
+      
+      await emailjs.send(
+        'service_6zyg8qw',
+        'template_ab7miu7',
+        templateParams,
+        'n3U7Znh_Ky9SSDDus'
+      );
+
+      // Reset form
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      console.log('Email sent successfully!');
+      alert('Message sent successfully! I\'ll get back to you soon.');
+    } catch (error: any) {
+      console.error('Detailed email error:', {
+        error,
+        message: error.message,
+        text: error.text
+      });
+      alert(`Failed to send message: ${error.message || 'Please try again later.'}`);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -119,7 +148,7 @@ export const ContactPage: React.FC = () => {
               Let's Connect
             </h2>
             
-            <div className="grid grid-cols-2 gap-3 mb-8">
+            <div className="grid grid-cols-2 gap-4">
               {contactInfo.map((info, index) => (
                 <motion.a
                   key={info.title}
@@ -146,7 +175,7 @@ export const ContactPage: React.FC = () => {
             </div>
 
             {/* Additional Info */}
-            <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-2xl p-5 border border-purple-200 shadow-lg">
+            <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-2xl p-5 border border-purple-200 shadow-lg mt-4">
               <h3 className="text-lg font-bold text-gray-900 mb-3">
                 🚀 What I'm Looking For
               </h3>
@@ -170,12 +199,9 @@ export const ContactPage: React.FC = () => {
               Send a Message
             </h2>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Name *
-                  </label>
                   <input
                     type="text"
                     id="name"
@@ -183,15 +209,12 @@ export const ContactPage: React.FC = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-3 py-2 bg-white/80 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
-                    placeholder="Your name"
+                    className="w-full px-3 py-3 bg-white/80 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
+                    placeholder="Your Name *"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Email *
-                  </label>
                   <input
                     type="email"
                     id="email"
@@ -199,16 +222,13 @@ export const ContactPage: React.FC = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-3 py-2 bg-white/80 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
-                    placeholder="your.email@example.com"
+                    className="w-full px-3 py-3 bg-white/80 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
+                    placeholder="Your Email *"
                   />
                 </div>
               </div>
               
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                  Subject *
-                </label>
                 <input
                   type="text"
                   id="subject"
@@ -216,44 +236,43 @@ export const ContactPage: React.FC = () => {
                   value={formData.subject}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-3 py-2 bg-white/80 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
-                  placeholder="What's this about?"
+                  className="w-full px-3 py-3 bg-white/80 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
+                  placeholder="Subject *"
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                  Message *
-                </label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleInputChange}
                   required
-                  rows={5}
-                  className="w-full px-3 py-2 bg-white/80 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 resize-none"
-                  placeholder="Tell me more about your project or idea..."
+                  rows={8}
+                  className="w-full px-3 py-3 bg-white/80 border border-gray-200 rounded-lg text-gray-900 placeholder-gray-500 focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 resize-none"
+                  placeholder="Your Message *"
                 />
               </div>
               
-              <div className="mt-8">
+              <div className="-mt-2">
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-4 px-6 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
-                whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
-              >
-                {isSubmitting ? (
-                  <div className="flex items-center justify-center">
-                    <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
-                    Sending...
-                  </div>
-                ) : (
-                  'Send Message →'
-                )}
-              </motion.button>
+
+                  whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
+                  whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
+                >
+                  {isSubmitting ? (
+                    <div className="flex items-center justify-center">
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                      Sending...
+                    </div>
+                  ) : (
+                    'Send Message →'
+                  )}
+                </motion.button>
+              </div>
             </form>
           </motion.div>
         </div>
@@ -261,7 +280,7 @@ export const ContactPage: React.FC = () => {
 
       {/* Call to Action */}
       <motion.div
-        className="text-center mt-20 mb-10"
+        className="text-center mt-12 mb-10"
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.8 }}
