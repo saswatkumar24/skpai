@@ -22,7 +22,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ setActiveSection }) 
       tech: ["AI", "OpenAI API", "LangChain", "React", "CSS", "Cursor"],
       image: "🎓",
       category: "AI/ML",
-      link: "https://github.com/saswatkumar24",
+  link: "https://saswatkumar24.github.io/emailcleaner/",
       featured: true
     },
     {
@@ -31,7 +31,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ setActiveSection }) 
       tech: ["AI", "OpenAI API", "LangChain", "Shell Scripting", "CSS", "Cursor"],
       image: "🧹",
       category: "AI/ML",
-      link: "https://github.com/saswatkumar24",
+      link: "https://saswatkumar24.github.io/emailcleaner/",
       featured: true
     },
     {
